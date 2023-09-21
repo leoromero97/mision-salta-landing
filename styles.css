@@ -1,7 +1,301 @@
+/* reset styles */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
 * {
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f2f2f2;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  /* Setea 10px a 1 rem*/
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+label,
+input,
+a,
+button,
+select,
+textarea {
+  font-display: swap;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2.7rem;
+  margin: 0;
+  color: #070A18;
+}
+
+h1:focus,
+h2:focus,
+h3:focus,
+h4:focus,
+h5:focus,
+h6:focus,
+p:focus,
+span:focus,
+label:focus,
+input:focus,
+a:focus,
+button:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+}
+
+select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+table {
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+input,
+select,
+textarea,
+button {
+  border: 0;
+  border-radius: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a:focus,
+a:active {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+::placeholder {
+  color: #999;
+  opacity: 1;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+:root {
+  --brand-primary-blue: #25337A;
+  --blue-tones-100: #F2F3FB;
+  --blue-tones-200: #C9CFEF;
+  --blue-tones-300: #93A0DE;
+  --blue-tones-400: #354AB0;
+  --blue-tones-500: #25337A;
+  --blue-tones-600: #1E2962;
+  --blue-tones-700: #161F49;
+  --blue-tones-800: #0F1431;
+  --blue-tones-900: #070A18;
+  --white: #FFFFFF;
+  --black: #000000;
+  --whatsapp-green: #25D366;
+  --whatsapp-blue: #111B21;
+  --shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.12);
+}
+
+body {
+  background: var(--white, #FFFFFF);
+  color: var(--blue-tones-900, #070A18);
+}
+
+/* Style components */
+
+.text-h1 {
+  font-size: 3.6rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.text-h2 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.text-subtitle {
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.text-body {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.button-primary,
+.button-secondary {
+  background: var(--brand-primary-blue, #25337A);
+  border-radius: 8px;
+  color: var(--white, #FFFFFF);
+  display: flex;
+  width: 100%;
+  max-width: 32rem;
+  padding: 1.6rem 3.2rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.button-primary:hover {
+  background: var(--blue-tones-600, #1E2962);
+}
+
+.button-primary:active {
+  background: var(--blue-tones-700, #161F49);
+}
+
+.button-primary:focus {
+  background: var(--blue-tones-500, #25337A);
+  border: 2px solid var(--blue-tones-200, #C9CFEF);
+}
+
+.button-secondary {
+  background: var(--blue-tones-100, #F2F3FB);
+  color: var(--blue-tones-900, #070A18);
+}
+
+.button-secondary:hover {
+  background: var(--blue-tones-200, #C9CFEF);
+}
+
+.button-secondary:active {
+  background: var(--blue-tones-300, #93A0DE);
+}
+
+.button-secondary:focus {
+  background: var(--blue-tones-300, #93A0DE);
+  border: 2px solid var(--blue-tones-900, #070A18);
+}
+
+.badge {
+  background: var(--blue-tones-200, #C9CFEF);
+  border-radius: 10rem;
+  border: 2px solid var(--primary-blue, #25337A);
+  display: flex;
+  max-width: 32rem;
+  width: 100%;
+  padding: 0.8rem 1.2rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.badge-icon,
+.card-activity-icon {
+  height: 3.2rem;
+  width: 3.2rem;
+}
+
+.badge-text {
+  color: var(--primary-blue, #25337A);
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.card-activity {
+  border-radius: 30rem;
+  background: var(--blue-tones-100, #F2F3FB);
+  display: flex;
+  width: 14rem;
+  height: 14rem;
+  padding: 1.2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  flex-shrink: 0;
+}
+
+.card-activity-label {
+  color: var(--blue-tones-900, #070A18);
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@media screen and (min-width: 768px) {
+  .text-h1 {
+    font-size: 4.4rem;
+    font-weight: 500;
   }
+
+  .text-h2 {
+    font-size: 3.6rem;
+  }
+
+  .text-subtitle {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+
+  .text-body {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  .badge {
+    max-width: 42rem;
+    gap: 1.6rem;
+  }
+  
+  .badge-text {
+    font-size: 1.8rem;
+  }
+
+  .card-activity {
+    width: 18rem;
+    height: 18rem;
+  }
+
+  .card-activity-icon {
+    height: 4rem;
+    width: 4rem;
+  }
+
+  .card-activity-label {
+    font-size: 1.8rem;
+  }
+}
