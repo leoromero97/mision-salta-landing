@@ -23,10 +23,10 @@
 
 <body>
   <header class="header">
+    <input type="checkbox" name="" class="check" id="menu" />
     <a href="#" class="contain-logo-ms"
       ><img class="logo-ms" src="assets/icons/logo-misión-salta.svg" alt=""
     /></a>
-    <input type="checkbox" name="" class="check" id="menu" />
     <label for="menu" class="nav-open">
       <img
         class="nav-hamburger-icon"
@@ -49,23 +49,40 @@
       </div>
 
       <div class="nav-main">
-        <div class="nav-text">
+        <div class="nav-container-text">
           <h3 class="text-h3 nav-title"><b>Misión Salta Instituto Cristo Obrero</b></h3>
         </div>
         <ul class="nav-links">
-          <li class="nav-link"><a href="#" class="text-body">¿Qué es?</a></li>
-          <li class="nav-link"><a href="#" class="text-body">¿Quiénes participan?</a></li>
-          <li class="nav-link"><a href="#" class="text-body">¿Cómo impacta?</a></li>
-          <li class="nav-link"><a href="#" class="text-body">¿Cómo ayudar?</a></li>
+          <li class="nav-link"><a href="#que-es" class="text-body">¿Qué es?</a></li>
+          <li class="nav-link"><a href="#quienes-participan" class="text-body">¿Quiénes participan?</a></li>
+          <li class="nav-link"><a href="#como-impacta" class="text-body">¿Cómo impacta?</a></li>
+          <li class="nav-link"><a href="#como-ayudar" class="text-body">¿Cómo ayudar?</a></li>
         </ul>
       </div>
 
-      <div class="nav-button">
+      <div class="nav-container-button">
         <a href="" class="button-primary">Ayudar</a>
         <span class="text-body">2010-2023</span>
       </div>
     </nav>
   </header>
+
+<div class="container-nav-desk">
+  <nav class="nav-desk">
+    <div class="contain-logo-ms-desk">
+      <a href="#" class="contain-logo-a-desk"
+      ><img class="logo-ms-desk" src="assets/icons/logo-misión-salta.svg" alt=""
+    /></a>
+    </div>
+    <ul class="nav-links-desk">
+      <li class="nav-link-desk"><a href="#que-es" class="text-body nav-link-text-desk" >¿Qué es?</a></li>
+      <li class="nav-link-desk"><a href="#quienes-participan" class="text-body nav-link-text-desk">¿Quiénes participan?</a></li>
+      <li class="nav-link-desk"><a href="#como-impacta" class="text-body nav-link-text-desk">¿Cómo impacta?</a></li>
+      <li class="nav-link-desk"><a href="#como-ayudar" class="text-body nav-link-text-desk">¿Cómo ayudar?</a></li>
+    </ul>
+  </nav>
+</div>
+
   <main>
     <section class="section hero-section">
       <div class="hero-container">
@@ -82,7 +99,7 @@
         </div>
       </div>
     </section>
-    <section class="section">
+    <section class="section" id="que-es">
       <div>
         <h2 class="text-h2">¿Qué es Misión Salta?</h2>
         <p class="text-body">Es un inspirador proyecto institucional que se inició en 2010. Su misión es reunir a un
@@ -90,7 +107,7 @@
           la Frontera, en el sur de la provincia de Salta, Argentina.</p>
       </div>
     </section>
-    <section class="section">
+    <section class="section" id="quienes-participan">
       <div>
         <h2 class="text-h2">¿Quiénes participan en Misión Salta?</h2>
         <div class="badge">
@@ -103,7 +120,7 @@
     </section>
     <section class="section">
       <div>
-        <h3 class="text-h2">¿Cómo impacta Misión Salta?</h3>
+        <h3 class="text-h2" id="como-impacta">¿Cómo impacta Misión Salta?</h3>
         <span class="text-subtitle">
           Actividades que se realizan
         </span>
