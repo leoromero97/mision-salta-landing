@@ -318,9 +318,9 @@ body {
 
 .header {
   display: grid;
-  width: 360px;
+  width: 36rem;
   min-width: 100%;
-  padding: 28px 12px;
+  padding: 2.8rem 1.2rem;
   grid-template-columns: max-content max-content;
   grid-template-areas: "logo icono";
   align-content: center;
@@ -330,8 +330,8 @@ body {
 .contain-logo-ms {
   grid-area: logo;
   display: flex;
-  width: 40px;
-  height: 40px;
+  width: 4rem;
+  height: 4rem;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
@@ -343,22 +343,23 @@ body {
 }
 
 .logo-ms {
-  width: 40px;
-  height: 40px;
+  width: 4rem;
+  height: 4rem;
   flex-shrink: 0;
 }
 
 .nav-hamburger-icon {
-  width: 32px;
-  height: 32px;
+  width: 3.2rem;
+  height: 3.2rem;
   flex-shrink: 0;
 }
-.nav-hamburger-icon, .nav-close-icon{
+.nav-hamburger-icon,
+.nav-close-icon {
   position: fixed;
 }
 .nav-close-icon {
-  width: 24px;
-  height: 24px;
+  width: 2.4rem;
+  height: 2.4rem;
 }
 .nav-open,
 .nav-close {
@@ -366,8 +367,8 @@ body {
   transition: opacity 0.3s;
   z-index: 1000;
   display: flex;
-  width: 40px;
-  height: 40px;
+  width: 4rem;
+  height: 4rem;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
@@ -404,14 +405,13 @@ body {
 }
 
 .nav-bar {
-  width: 360px;
-  min-width: 100%;
-  height: 800px;
+  width: 36rem;
+  height: 80rem;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
   position: fixed;
-  z-index: 100;
+  z-index: 5;
   background-color: var(--white);
   right: -100%;
   top: 0;
@@ -430,13 +430,13 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 40px;
+  gap: 4rem;
   align-self: stretch;
 }
 
 .nav-container-text {
   display: flex;
-  padding: 0px 12px;
+  padding: 0 1.2rem;
   justify-content: space-between;
   align-items: flex-start;
   align-self: stretch;
@@ -444,22 +444,22 @@ body {
 
 .nav-links {
   display: flex;
-  width: 360px;
+  width: 36rem;
   flex-direction: column;
   align-items: flex-start;
 }
 
 .nav-link {
   display: flex;
-  padding: 16px 12px;
+  padding: 1.6rem 1.2rem;
   align-items: flex-start;
-  gap: 10px;
+  gap: 1rem;
   align-self: stretch;
 }
 
 .contain-logo-ms-menu {
   display: flex;
-  padding: 28px 12px;
+  padding: 2.8rem 1.2rem;
   justify-content: space-between;
   align-items: center;
   align-self: stretch;
@@ -467,26 +467,26 @@ body {
 
 .contain-logo-a-menu {
   display: flex;
-  width: 40px;
-  height: 40px;
+  width: 4rem;
+  height: 4rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .logo-ms-menu {
-  width: 40px;
-  height: 40px;
+  width: 4rem;
+  height: 4rem;
   flex-shrink: 0;
 }
 
 .nav-container-button {
   display: flex;
-  padding: 0px 12px 40px 12px;
+  padding: 0px 1.2rem 4rem 1.2rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 24px;
+  gap: 2.4rem;
   align-self: stretch;
 }
 
@@ -506,15 +506,20 @@ body {
     display: flex;
     background: var(--white);
     width: 100%;
-    padding: 28px 144px;
+    padding: 2.8rem 14.4rem;
     justify-content: space-between;
     align-items: center;
     box-shadow: var(--shadow-drop);
-    border-radius: 0px 0px 4px 4px;
+    border-radius: 0px 0px 0.4rem 0.4rem;
+    -webkit-border-radius: 0px 0px 0.4rem 0.4rem;
+    -moz-border-radius: 0px 0px 0.4rem 0.4rem;
+    -ms-border-radius: 0px 0px 0.4rem 0.4rem;
+    -o-border-radius: 0px 0px 0.4rem 0.4rem;
   }
   .nav-desk {
     display: flex;
     width: 100%;
+    max-width: 144rem;
     justify-content: space-between;
     align-items: center;
     flex-shrink: 0;
@@ -523,13 +528,13 @@ body {
   .nav-links-desk {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 4rem;
   }
 
   .contain-logo-ms-desk {
     display: flex;
-    width: 80px;
-    height: 80px;
+    width: 8rem;
+    height: 8rem;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
@@ -537,8 +542,8 @@ body {
 
   .logo-ms-desk {
     display: flex;
-    width: 80px;
-    height: 80px;
+    width: 8rem;
+    height: 8rem;
     justify-content: center;
     align-items: center;
     flex-shrink: 0;
@@ -546,12 +551,12 @@ body {
 
   .nav-link-text-desk {
     color: var(--brand-primary-blue);
-
     font-style: normal;
     font-weight: 700;
     line-height: normal;
   }
 }
+
 /* Hero section */
 
 .hero-section {
