@@ -263,6 +263,21 @@ body {
   width: 100%;
 }
 
+.video {
+  height: 40rem;
+  width: 100%;
+  border-radius: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  max-width: 60rem;
+}
+
+.video:hover {
+  border: 0.4rem solid var(--brand-primary-blue, #25337A);
+}
+
 @media screen and (min-width: 768px) {
   .text-h1 {
     font-size: 4.4rem;
@@ -305,6 +320,10 @@ body {
   .card-activity-label {
     font-size: 1.8rem;
   }
+
+  .video {
+    height: 60rem;
+  }
 }
 
 /* Hero section */
@@ -321,7 +340,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: end;
-  padding: 8rem 0;
+  padding: 8rem 1.2rem;
   max-width: 144rem;
   width: 100%;
 }
@@ -342,7 +361,7 @@ body {
 }
 
 .hero-subtitle {
-  visibility: hidden;
+  display: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -364,7 +383,7 @@ body {
   }
 
   .hero-subtitle {
-    visibility: visible;
+    display: flex;
   }
 
   .hero-button {
@@ -384,5 +403,71 @@ body {
   .hero-button:focus {
     background: var(--blue-tones-300, #93A0DE);
     border: 2px solid var(--blue-tones-900, #070A18);
+  }
+}
+
+/* Those who participate section */
+
+.those-who-participate-section {
+  background-color: var(--blue-tones-400, #354AB0);
+}
+
+.those-who-participate-container {
+  display: flex;
+  flex-direction: column;
+  padding: 8rem 1.2rem;
+  max-width: 144rem;
+  width: 100%;
+  gap: 4rem;
+}
+
+.those-who-participate-container-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 2.4rem;
+}
+
+.those-who-participate-title {
+  color: var(--white, #FFFFFF);
+  text-align: center;
+}
+
+.those-who-participate-description {
+  color: var(--white, #FFFFFF);
+}
+
+.those-who-participate-container-video {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .those-who-participate-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14.4rem 0.8rem;
+  }
+
+  .those-who-participate-container-content,
+  .those-who-participate-container-video {
+    width: 50%;
+  }
+
+  .those-who-participate-container-video {
+    justify-content: flex-start;
+  }
+
+  .those-who-participate-container-content {
+    max-width: 61rem;
+    align-items: flex-start;
+    order: 2;
+  }
+
+  .those-who-participate-title {
+    text-align: left;
   }
 }
