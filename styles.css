@@ -399,14 +399,15 @@ body {
 }
 
 /* Nav Menu*/
-.check:checked ~ .nav-bar {
+.check:checked ~ .nav-bar-menu {
   right: 0%;
   pointer-events: all;
 }
 
-.nav-bar {
+.nav-bar-menu {
   width: 36rem;
-  height: 80rem;
+  height: 100%;
+  max-height: 100vh;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
@@ -495,7 +496,7 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .nav-bar {
+  .nav-bar-menu {
     display: none;
   }
   .header {
@@ -507,7 +508,7 @@ body {
     background: var(--white);
     width: 100%;
     padding: 2.8rem 14.4rem;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     box-shadow: var(--shadow-drop);
     border-radius: 0px 0px 0.4rem 0.4rem;
