@@ -817,6 +817,8 @@ body {
 
 .how-to-help-description {
   color: var(--white, #FFFFFF);
+  text-align: left;
+  width: 100%;
 }
 
 .how-to-help-alias-button {
