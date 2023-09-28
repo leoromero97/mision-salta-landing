@@ -156,6 +156,14 @@ body {
   line-height: normal;
 }
 
+.text-h4 {
+  font-family: Roboto;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
 .text-subtitle {
   font-size: 2.4rem;
   font-weight: 500;
@@ -282,7 +290,7 @@ body {
 }
 
 .video:hover {
-  border: 0.4rem solid var(--brand-primary-blue, #25337A);
+  border: 0.4rem solid var(--brand-primary-blue, #25337a);
 }
 
 @media screen and (min-width: 768px) {
@@ -658,9 +666,9 @@ body {
   }
 }
 
-/* Qué es Misión Salta section */
+/* What it is section */
 
-.que-es-section {
+.what-is-section {
   display: flex;
   padding: 72px 12px;
   flex-direction: column;
@@ -669,7 +677,7 @@ body {
   align-self: stretch;
 }
 
-.container-about-us {
+.container-what-is {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -677,7 +685,7 @@ body {
   align-self: stretch;
 }
 
-.container-text-que-es {
+.container-text-what-is {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -685,7 +693,7 @@ body {
   align-self: stretch;
 }
 
-.container-video-que-es {
+.container-video {
   display: flex;
   height: 400px;
   flex-direction: column;
@@ -695,10 +703,59 @@ body {
   align-self: stretch;
 }
 
+@media (min-width: 768px) {
+  .what-is-section {
+    display: flex;
+    padding: 144px;
+    gap: 0px;
+    flex-direction: column;
+    align-items: center;
+    align-self: stretch;
+  }
+
+  .container-what-is {
+    display: flex;
+    flex-direction: row;
+    width: 1440px;
+    max-width: 100%;
+    align-items: center;
+    gap: 220px;
+  }
+
+  .container-text-what-is {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    max-height: 61rem;
+  }
+
+  .h4-desktop {
+    font-family: Roboto;
+    font-size: 3.6rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .text-body-desktop {
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .container-video {
+    max-width: 50%;
+    min-height: 600px;
+  }
+}
+
 /* Those who participate section */
 
 .those-who-participate-section {
-  background-color: var(--blue-tones-400, #354AB0);
+  background-color: var(--blue-tones-400, #354ab0);
 }
 
 .those-who-participate-container {
@@ -719,12 +776,12 @@ body {
 }
 
 .those-who-participate-title {
-  color: var(--white, #FFFFFF);
+  color: var(--white, #ffffff);
   text-align: center;
 }
 
 .those-who-participate-description {
-  color: var(--white, #FFFFFF);
+  color: var(--white, #ffffff);
 }
 
 .those-who-participate-container-video {
