@@ -182,10 +182,8 @@ body {
   font-size: 1.8rem;
   font-weight: 700;
   line-height: normal;
-}
-
-.button-primary:hover {
-  background: var(--blue-tones-600, #1e2962);
+  transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+  transition-duration: .3s;
 }
 
 .button-primary:active {
@@ -200,10 +198,6 @@ body {
 .button-secondary {
   background: var(--blue-tones-100, #f2f3fb);
   color: var(--blue-tones-900, #070a18);
-}
-
-.button-secondary:hover {
-  background: var(--blue-tones-200, #c9cfef);
 }
 
 .button-secondary:active {
@@ -281,8 +275,30 @@ body {
   max-width: 60rem;
 }
 
-.video:hover {
-  border: 0.4rem solid var(--brand-primary-blue, #25337A);
+.button-float-wpp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20rem;
+  padding: 1.6rem;
+  height: 5.6rem;
+  width: 5.6rem;
+  position: fixed;
+  right: 2rem;
+  top: 60rem;
+  z-index: 15;
+  font-size: 0.1rem;
+  background: var(--whatsapp-green, #25d366);
+  color: var(--whatsapp-green, #111b21);
+  box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.12);
+  transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+  transition-duration: .3s;
+}
+
+.button-float-wpp_img {
+  position: absolute;
+  height: 2.4rem;
+  width: 2.4rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -331,6 +347,29 @@ body {
   .video {
     height: 60rem;
   }
+
+  .video:hover {
+    border: 0.4rem solid var(--brand-primary-blue, #25337A);
+  }
+
+  .button-primary:hover {
+    background: var(--blue-tones-600, #1e2962);
+  }
+
+  .button-secondary:hover {
+    background: var(--blue-tones-200, #c9cfef);
+  }
+
+  .button-float-wpp {
+    right: 55rem;
+    top: 90rem;
+    height: 6.4rem;
+    width: 6.4rem;
+  }
+
+  .button-float-wpp:hover {
+    background: #22c75e;
+  }
 }
 
 /* Nav Bar */
@@ -372,14 +411,17 @@ body {
   height: 3.2rem;
   flex-shrink: 0;
 }
-.check:checked ~ .nav-hamburger-icon,
+
+.check:checked~.nav-hamburger-icon,
 .nav-close-icon {
   position: fixed;
 }
+
 .nav-close-icon {
   width: 2.4rem;
   height: 2.4rem;
 }
+
 .nav-open,
 .nav-close {
   grid-area: icono;
@@ -405,20 +447,20 @@ body {
   display: none;
 }
 
-.check:checked ~ .nav-open {
+.check:checked~.nav-open {
   opacity: 0;
 }
 
-.check:checked ~ .contain-logo-ms {
+.check:checked~.contain-logo-ms {
   opacity: 0;
 }
 
-.check:checked ~ .nav-close {
+.check:checked~.nav-close {
   opacity: 1;
 }
 
 /* Nav Menu*/
-.check:checked ~ .nav-bar-menu {
+.check:checked~.nav-bar-menu {
   right: 0%;
   pointer-events: all;
 }
@@ -518,6 +560,7 @@ body {
   .nav-bar-menu {
     display: none;
   }
+
   .header {
     display: none;
   }
@@ -536,6 +579,7 @@ body {
     -ms-border-radius: 0px 0px 0.4rem 0.4rem;
     -o-border-radius: 0px 0px 0.4rem 0.4rem;
   }
+
   .nav-desk {
     display: flex;
     width: 100%;
