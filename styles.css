@@ -157,9 +157,7 @@ body {
 }
 
 .text-h4 {
-  font-family: Roboto;
-  font-size: 24px;
-  font-style: normal;
+  font-size: 2.4rem;
   font-weight: 700;
   line-height: normal;
 }
@@ -301,6 +299,11 @@ body {
 
   .text-h2 {
     font-size: 3.6rem;
+  }
+
+  .text-h4 {
+    font-size: 3.6rem;
+    line-height: normal;
   }
 
   .text-subtitle {
@@ -669,18 +672,14 @@ body {
 /* What it is section */
 
 .what-is-section {
-  display: flex;
   padding: 7.2rem 1.2rem;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 4rem;
-  align-self: stretch;
 }
 
 .container-what-is {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  max-width: 144rem;
   gap: 4rem;
   align-self: stretch;
 }
@@ -714,17 +713,12 @@ body {
 @media (min-width: 768px) {
   .what-is-section {
     padding: 14.4rem 0.8rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
   }
 
   .container-what-is {
-    display: flex;
     flex-direction: row;
-    width: 144.4rem;
-    max-width: 100%;
-    align-items: center;
+    max-width: 144rem;
+    width: 100%;
     justify-content: space-between;
   }
 
@@ -737,22 +731,6 @@ body {
     width: 61rem;
     min-width: 50%;
   }
-
-  .h4-desktop {
-    font-family: Roboto;
-    font-size: 3.6rem;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-  }
-
-  .text-body-desktop {
-    font-family: Roboto;
-    font-size: 2rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-  }
   .container-video {
     width: 61rem;
     height: 60rem;
@@ -760,7 +738,6 @@ body {
   .img-video {
     width: 100%;
     height: 60rem;
-    object-fit: cover;
   }
 }
 
