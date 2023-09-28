@@ -89,6 +89,11 @@
           </a>
         </div>
       </div>
+      <a href="https://wa.me/541133490009?text=Hola, tengo una duda sobre Misión Salta. Mi nombre es..." target="_blank"
+        rel="noopener noreferrer" class="button-float-wpp">
+        <img src="/assets/icons/ic-whatsapp.svg" alt="Icono de WhatsApp" class="button-float-wpp_img">
+        Escribir por WhatsApp
+      </a>
     </section>
     <section class="section que-es-section" id="que-es">
       <div class="container-about-us">
@@ -141,8 +146,8 @@
               Cualquier persona que quiera y pueda ayudar con donaciones
             </span>
           </div>
-          <a href="#link-wpp/Hola! Quiero ser voluntario de Misión Salta, mi nombre es..." target="_blank"
-            class="button-secondary">
+          <a href="https://wa.me/541133490009?text=Hola! Quiero ser voluntario de Misión Salta, mi nombre es..."
+            target="_blank" rel="noopener noreferrer" class="button-secondary">
             Solicitar ser voluntario
           </a>
         </div>
@@ -210,8 +215,8 @@
           </a>
         </div>
         <div class="how-to-help-container-video">
-          <a href="https://www.youtube.com/embed/ge50xNe8Yz8?rel=0" target="_blank" rel="noopener noreferrer"
-            class="video" title="Ver el video del 2019 en Youtube">
+          <a href="https://www.youtube.com/watch?v=ge50xNe8Yz8" target="_blank" rel="noopener noreferrer" class="video"
+            title="Ver el video del 2019 en Youtube">
             <img src="/assets/images/cover-video-2019.png" alt="Portada del video en Youtube de Misión Salta del 2019">
           </a>
         </div>
@@ -227,22 +232,22 @@
   </footer>
   <script>
     const buttonAliasMP = document.getElementById("buttonAliasMP");
-    
+
     buttonAliasMP.addEventListener("click", () => {
-        const textToCopy = buttonAliasMP.textContent;
-        const textArea = document.createElement("textarea");
-        textArea.value = textToCopy;
-        document.body.appendChild(textArea);
-        textArea.select();
-        document.execCommand("copy");
-        document.body.removeChild(textArea);
-        const toast = document.createElement("div");
-        toast.classList.add('toast');
-        toast.textContent = "Alias copiado en el portapapeles: " + textToCopy;
-        document.body.appendChild(toast);
-        setTimeout(() => {
-            document.body.removeChild(toast);
-        }, 6000);
+      const textToCopy = buttonAliasMP.textContent;
+      const textArea = document.createElement("textarea");
+      textArea.value = textToCopy;
+      document.body.appendChild(textArea);
+      textArea.select();
+      document.execCommand("copy");
+      document.body.removeChild(textArea);
+      const toast = document.createElement("div");
+      toast.classList.add('toast');
+      toast.textContent = "Alias copiado en el portapapeles: " + textToCopy;
+      document.body.appendChild(toast);
+      setTimeout(() => {
+        document.body.removeChild(toast);
+      }, 6000);
     });
-</script>
+  </script>
 </body>
