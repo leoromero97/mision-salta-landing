@@ -1136,13 +1136,23 @@ body {
   gap: 2.4rem;
   align-self: stretch;
 }
-.footer-label-text-copy{
+
+.footer-label-text-copy {
   font-weight: 500;
   font-size: 1.4rem;
 }
-.footer-label-text-names{
-font-size: 1.4rem;
-font-weight: 700;
+
+.footer-label-text-names {
+  font-size: 1.4rem;
+}
+
+.footer-link-linkedin {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.footer-link-linkedin:hover {
+  color: var(--blue-tones-400);
 }
 
 @media screen and (min-width: 768px) {
@@ -1155,7 +1165,7 @@ font-weight: 700;
   .container-slogan {
     flex-direction: row;
   }
-  
+
   .footer-container-text {
     align-items: center;
     flex-direction: row;
