@@ -881,7 +881,7 @@ body {
 
 /* Section como-impacta */
 
-.section-como-impacta {
+.section-how-the-impacts {
   padding: 7.2rem 1.2rem;
 }
 
@@ -944,8 +944,8 @@ body {
 }
 
 @media screen and (min-width: 768px) {
-  .section-como-impacta {
-    padding: 14.4rem;
+  .section-how-the-impacts {
+    padding: 14.4rem 0.8rem;
   }
 
   .how-the-impacts {
