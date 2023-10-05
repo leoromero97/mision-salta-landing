@@ -10,6 +10,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
   /* Setea 10px a 1 rem*/
 }
 
@@ -1055,5 +1056,158 @@ body {
 
   .how-to-help-title {
     text-align: left;
+  }
+}
+
+/* Footer Section */
+
+.contain-footer {
+  display: flex;
+  width: 100%;
+  max-width: 36rem;
+  padding: 4rem 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+.container-slogan {
+  display: flex;
+  padding: 3.2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  align-self: stretch;
+}
+
+.footer-container-text {
+  display: flex;
+  padding: 0 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2.4rem;
+  align-self: stretch;
+}
+
+.text-align-center {
+  text-align: center;
+  font-weight: 700;
+}
+
+.footer-label-text-blue {
+  color: var(--brand-primary-blue);
+}
+
+.footer-label-text {
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.footer-container-logos {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4rem;
+  align-self: center;
+}
+
+.footer-contain-iconos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  align-self: stretch;
+}
+
+.footer-contain-logo{
+  width: 8rem;
+  height: 8rem;
+  display: flex;
+  justify-content: center;
+}
+
+.footer-icon{
+  width: 100%;
+  height: 100%;
+}
+
+.container-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.footer-contain-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
+  align-self: stretch;
+}
+
+.footer-label-text-copy {
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+
+.footer-label-text-names {
+  font-size: 1.4rem;
+}
+
+.footer-link-linkedin {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.footer-link-linkedin:hover {
+  color: var(--blue-tones-400);
+}
+
+@media screen and (min-width: 768px) {
+  .contain-footer {
+    max-width: 144rem;
+    padding: 8rem 0;
+    align-self: stretch;
+  }
+
+  .container-slogan {
+    flex-direction: row;
+  }
+
+  .footer-container-text {
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .text-align-center {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  .footer-label-text-blue {
+    color: var(--brand-primary-blue);
+  }
+
+  .footer-label-text {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  .footer-contain-iconos {
+    justify-content: flex-start;
+    gap: 1.6rem;
+    flex: 1 0 0;
+  }
+
+  .container-icon {
+    width: 2.4rem;
+    height: 2.4rem;
   }
 }

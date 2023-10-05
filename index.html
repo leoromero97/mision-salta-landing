@@ -196,8 +196,7 @@
             <span class="text-h3 text-h3-impact">+450</span>
             <span class="text-body text-body-impact">Misioneros participaron</span>
           </div>
-        </div>
-        
+        </div>      
         <span class="text-subtitle-card-impact"> Actividades que se realizan </span>
         <div class="row-cards">
           <div class="card-activity">
@@ -219,8 +218,7 @@
             <img src="/assets/icons/ic-talleres.svg" alt="Icono talleres" class="card-activity-icon" />
             <span class="card-activity-label"> Talleres</span>
           </div>
-        </div>
-       
+        </div>     
         <div class="row-cards">
           <div class="card-activity">
             <img src="/assets/icons/ic-show-de-magia.svg" alt="Icono show de magia" class="card-activity-icon" />
@@ -295,11 +293,33 @@
       </div>
     </section>
   </main>
-  <footer>
-    <div>
-      <span class="text-subtitle">
-        Uniendo corazones, transformando vidas
-      </span>
+
+  <footer class="section">
+    <div class="contain-footer">
+      <div class="container-slogan">
+        <span class="footer-label-text footer-label-text-blue" for="footer">Desarrollo de empatía y solaridad</span>
+        <span class="footer-label-text footer-label-text-blue" for="footer">-</span>
+        <span class="footer-label-text footer-label-text-blue" for="footer">Conexión con realidades diferentes</span>
+        <span class="footer-label-text footer-label-text-blue" for="footer">-</span>
+        <span class="footer-label-text footer-label-text-blue" for="footer">Crecimiento personal y espiritual</span>
+      </div>
+      <div class="footer-container-text">
+        <div class="footer-container-logos">
+          <a class="footer-contain-logo" target="_blank" rel="noopener noreferrer" href="https://cristoobrero.com.ar/"><img class="footer-icon" src="assets/icons/logo-ico.svg" alt="Icono logo Ico"></a>
+          <a class="footer-contain-logo" target="_blank" rel="noopener noreferrer" href="#"><img class="footer-icon" src="assets/icons/logo-misión-salta.svg" alt="Icono logo mision salta"></a>
+        </div>
+        <span class="text-subtitle text-align-center">
+          Uniendo corazones, transformando vidas
+        </span>
+        <div class="footer-contain-iconos">
+          <a class="container-icon" target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/groups/189683024469955/"><img class="footer-icon" src="assets/icons/ic-facebook.svg" alt="Icono facebook"></a>
+          <a class="container-icon" target="_blank" rel="noopener noreferrer" href="https://www.instagram.com/ico_mision/"><img class="footer-icon" src="assets/icons/ic-instagram.svg" alt="Icono Instagram"></a>
+        </div>
+        <div class="footer-contain-copy text-align-center">
+          <span class="footer-label-text-copy" for="footerfooter">  &copy Copyright 2010 - <span class="footer-label-text-copy" id="currentYear"></span> </span>
+          <span class="footer-label-text-names" for="footer">Desarrollador por <a class="footer-link-linkedin" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/leonardogerbacioromero/">Leo Romero </a> y <a class="footer-link-linkedin" target="_blank" rel="noopener noreferrer" href="https://www.linkedin.com/in/sebastian-perezz/">Seba Perez</a></span>
+        </div>
+      </div>
     </div>
   </footer>
   <script>
@@ -322,6 +342,10 @@
       }, 6000);
     });
   </script>
+  <script>
+    const yearSpan = document.querySelector('#currentYear');
+    const currentYear = new Date();
+    yearSpan.innerText = currentYear.getFullYear();
+  </script>
 </body>
-
 </html>
