@@ -297,6 +297,7 @@ body {
 .video:hover {
   border: 0.4rem solid var(--brand-primary-blue, #25337a);
 }
+
 .button-float-wpp {
   display: flex;
   align-items: center;
@@ -800,10 +801,12 @@ body {
     width: 61rem;
     min-width: 50%;
   }
+
   .container-video {
     width: 61rem;
     height: 60rem;
   }
+
   .img-video {
     width: 100%;
     height: 60rem;
@@ -878,55 +881,93 @@ body {
 
 /* Section como-impacta */
 
-.section-como-impacta {
-  display: flex;
-  padding: 72px 12px;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 40px;
-  align-self: stretch;
+.section-how-the-impacts {
+  padding: 7.2rem 1.2rem;
 }
 
 .how-the-impacts {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 24px;
+  gap: 2.4rem;
   align-self: stretch;
 }
 
-.colums-numbers-impact{
-display: flex;
-justify-content: space-between;
-align-items: flex-start;
-align-content: flex-start;
-row-gap: 24px;
-align-self: stretch;
-flex-wrap: wrap;
+.colums-numbers-impact {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+  row-gap: 2.4rem;
+  align-self: stretch;
+  flex-wrap: wrap;
 }
 
 .card-impact {
   display: flex;
-  width: 130px;
-  padding: 12px;
+  width: 13rem;
+  padding: 1.2rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 12px;
+  gap: 1.2rem;
 }
 
-.text-h3-impact{
+.text-h3-impact {
   color: var(--brand-primary-blue);
   text-align: center;
 }
 
-.text-body-impact{
+.text-body-impact {
   text-align: center;
 }
 
-.text-h2-impact{
+.text-h2-impact {
   text-align: center;
   align-self: stretch;
+}
+
+.row-cards {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 4rem;
+  align-self: stretch;
+  flex-wrap: wrap;
+}
+
+.text-subtitle-card-impact {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: normal;
+}
+
+@media screen and (min-width: 768px) {
+  .section-how-the-impacts {
+    padding: 14.4rem 0.8rem;
+  }
+
+  .how-the-impacts {
+    max-width: 144rem;
+    width: 100%;
+    gap: 8rem;
+    justify-content: space-between;
+  }
+
+  .text-h2-impact {
+    text-align: left;
+  }
+
+  .text-subtitle-card-impact {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+
+  .row-cards {
+    max-width: 144rem;
+    justify-content: space-between;
+  }
 }
 
 /* How to help section */
