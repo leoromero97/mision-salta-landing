@@ -675,10 +675,6 @@ body {
   .nav-link-text-desk:hover:before {
     width: 100%;
   }
-
-  .nav-link-focus-desk{
-    width: 100%;
-  }
 }
 
 /* Hero section */
