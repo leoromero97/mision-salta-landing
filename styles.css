@@ -421,6 +421,12 @@ body {
   grid-template-areas: "logo icono";
   align-content: center;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background-color: var(--blue-tones-100);
+  box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
 }
 
 .contain-logo-ms {
@@ -450,18 +456,16 @@ body {
   flex-shrink: 0;
 }
 
-.check:checked~.nav-hamburger-icon,
 .nav-close-icon {
-  position: fixed;
+  width: 3.2rem;
+  height: 3.2rem;
 }
 
-.nav-close-icon {
-  width: 2.4rem;
-  height: 2.4rem;
+.body-hidden{
+  overflow: hidden;
 }
 
-.nav-open,
-.nav-close {
+.container-icon-menu{
   grid-area: icono;
   transition: opacity 0.3s;
   z-index: 1000;
@@ -477,31 +481,11 @@ body {
   -o-transition: opacity 0.3s;
 }
 
-.nav-close {
+.icons-menu {
   opacity: 0;
-}
-
-.check {
-  display: none;
-}
-
-.check:checked~.nav-open {
-  opacity: 0;
-}
-
-.check:checked~.contain-logo-ms {
-  opacity: 0;
-}
-
-.check:checked~.nav-close {
-  opacity: 1;
 }
 
 /* Nav Menu*/
-.check:checked~.nav-bar-menu {
-  right: 0%;
-  pointer-events: all;
-}
 
 .nav-bar-menu {
   width: 36rem;
@@ -524,6 +508,11 @@ body {
   -moz-transition: 0.8s right;
   -ms-transition: 0.8s right;
   -o-transition: 0.8s right;
+}
+
+.open-nav-bar-menu{
+  right: 0%;
+  pointer-events:unset ;
 }
 
 .nav-main {
@@ -599,11 +588,17 @@ body {
     display: none;
   }
 
+  .body-hidden{
+    overflow: unset;
+  }
+
   .header {
     display: none;
   }
 
   .container-nav-desk {
+    position: sticky;
+    top: 0;
     display: flex;
     background: var(--white);
     width: 100%;
@@ -616,6 +611,9 @@ body {
     -moz-border-radius: 0px 0px 0.4rem 0.4rem;
     -ms-border-radius: 0px 0px 0.4rem 0.4rem;
     -o-border-radius: 0px 0px 0.4rem 0.4rem;
+    box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 7px 0px rgba(0,0,0,0.75);
   }
 
   .nav-desk {
@@ -656,6 +654,30 @@ body {
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    position: relative;
+  }
+
+  .nav-link-text-desk::before {
+    content: "";
+    height: .3rem;
+    width: 0%;
+    background: var(--blue-tones-500);
+    position: absolute;
+    left: 0;
+    bottom: -.5rem;
+    transition: 0.4s ease-out;
+    -webkit-transition: 0.4s ease-out;
+    -moz-transition: 0.4s ease-out;
+    -ms-transition: 0.4s ease-out;
+    -o-transition: 0.4s ease-out;
+}
+
+  .nav-link-text-desk:hover:before {
+    width: 100%;
+  }
+
+  .nav-link-focus-desk{
+    width: 100%;
   }
 }
 
