@@ -761,7 +761,7 @@ body {
 /* What it is section */
 
 .what-is-section {
-  padding: 7.2rem 1.2rem;
+  padding: 12rem 1.2rem;
 }
 
 .container-what-is {
@@ -841,7 +841,7 @@ body {
 .those-who-participate-container {
   display: flex;
   flex-direction: column;
-  padding: 8rem 1.2rem;
+  padding: 12rem 1.2rem;
   max-width: 144rem;
   width: 100%;
   gap: 4rem;
@@ -901,7 +901,7 @@ body {
 /* Section como-impacta */
 
 .section-how-the-impacts {
-  padding: 7.2rem 1.2rem;
+  padding: 12rem 1.2rem;
 }
 
 .how-the-impacts {
@@ -998,7 +998,7 @@ body {
 .how-to-help-container {
   display: flex;
   flex-direction: column;
-  padding: 8rem 1.2rem;
+  padding: 12rem 1.2rem;
   max-width: 144rem;
   width: 100%;
   gap: 4rem;
