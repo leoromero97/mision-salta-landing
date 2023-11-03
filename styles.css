@@ -465,6 +465,10 @@ body {
   overflow: hidden;
 }
 
+.opacity-0{
+  opacity: 0;
+}
+
 .container-icon-menu{
   grid-area: icono;
   transition: opacity 0.3s;
@@ -964,7 +968,7 @@ body {
 
 /* Animation Contadores */
 
-@keyframes aparecer {
+@keyframes show {
   0% {
     opacity: 0;
     transform: translateY(10rem);
@@ -987,9 +991,9 @@ body {
   opacity: 0;
 }
 
-.animar {
-  animation: aparecer 1.2s ;
-  -webkit-animation: aparecer 1.2s ;
+.animate {
+  animation: show 1.2s ;
+  -webkit-animation: show 1.2s ;
 }
 
 @media screen and (min-width: 768px) {

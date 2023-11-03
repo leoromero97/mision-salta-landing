@@ -23,7 +23,7 @@
 
 <body>
   <header class="header">
-    <a href="#" class="contain-logo-ms"><img class="logo-ms" src="assets/icons/logo-misión-salta.svg"
+    <a href="#main-section" id="logo-mision-mobile" class="contain-logo-ms"><img class="logo-ms" src="assets/icons/logo-misión-salta.svg"
         alt="Logo misión salta" /></a>
     <picture class="container-icon-menu">
       <img class="nav-hamburger-icon" src="assets/icons/ic-hamburger-menu.svg" alt="Icono menu" />
@@ -36,7 +36,7 @@
     <nav class="nav-bar-menu">
 
       <div class="contain-logo-ms-menu">
-        <a href="#main-section" class="contain-logo-a-menu"><img class="logo-ms-menu" src="assets/icons/logo-misión-salta.svg"
+        <a href="#main-section" class="contain-logo-a-menu nav-link-menu"><img class="logo-ms-menu" src="assets/icons/logo-misión-salta.svg"
             alt="Logo misión salta" /></a>
       </div>
 
@@ -176,23 +176,23 @@
         </h3>
         <div class="colums-numbers-impact">
           <div class="card-impact card-hidden">
-            <span class="text-h3 text-h3-impact counter-number" data-cantidad-total="11">0</span>
+            <span class="text-h3 text-h3-impact counter-number" data-total-quantity="11">0</span>
             <span class="text-body text-body-impact">Misiones completadas</span>
           </div>
           <div class="card-impact card-hidden">
-           <span class="text-h3 text-h3-impact">+<span class="text-h3 text-h3-impact counter-number" data-cantidad-total="5060">0</span></span> 
+           <span class="text-h3 text-h3-impact">+<span class="text-h3 text-h3-impact counter-number" data-total-quantity="5060">0</span></span> 
             <span class="text-body text-body-impact">Personas en colegios</span>
           </div>
           <div class="card-impact card-hidden">
-            <span class="text-h3 text-h3-impact">+<span class="text-h3 text-h3-impact counter-number"  data-cantidad-total="500">0</span></span>
+            <span class="text-h3 text-h3-impact">+<span class="text-h3 text-h3-impact counter-number" data-total-quantity="500">0</span></span>
             <span class="text-body text-body-impact">Juguetes donados</span>
           </div>
           <div class="card-impact card-hidden">
-            <span class="text-h3 text-h3-impact">+<span class="text-h3 text-h3-impact counter-number"  data-cantidad-total="500">0</span></span>
+            <span class="text-h3 text-h3-impact">+<span class="text-h3 text-h3-impact counter-number" data-total-quantity="500">0</span></span>
             <span class="text-body text-body-impact">Prendas donadas</span>
           </div>
           <div class="card-impact card-hidden">
-             <span class="text-h3 text-h3-impact">+<span class="text-h3 text-h3-impact counter-number"  data-cantidad-total="450">0</span></span>
+             <span class="text-h3 text-h3-impact">+<span class="text-h3 text-h3-impact counter-number" data-total-quantity="450">0</span></span>
             <span class="text-body text-body-impact">Misioneros participaron</span>
           </div>
         </div>      
@@ -352,6 +352,7 @@
     const menuMobile = document.querySelector('.nav-bar-menu');
     const body = document.querySelector('body');
     const linksMenuMobile = document.querySelectorAll('.nav-link-menu');
+    const iconMisionSalta = document.querySelector('#logo-mision-mobile')
 
     iconClose.addEventListener("click", openMenu);
 
@@ -360,6 +361,7 @@
     iconBurger.classList.toggle('icons-menu');
     menuMobile.classList.toggle('open-nav-bar-menu');
     body.classList.toggle('body-hidden');
+    iconMisionSalta.classList.toggle('opacity-0')
 };
 
   for(links of linksMenuMobile){
@@ -369,39 +371,40 @@
   iconClose.classList.toggle('icons-menu');
   iconBurger.classList.toggle('icons-menu');
   body.classList.toggle('body-hidden');
+  iconMisionSalta.classList.toggle('opacity-0')
 };
 };
 
-    // ANIMACION DE CONTADORES
+    // Animation Counters
 
     addEventListener('DOMContentLoaded', () => {
-    const contadores = document.querySelectorAll('.counter-number');
-    const velocidad = 1000;
+    const counters = document.querySelectorAll('.counter-number');
+    const speed = 1000;
 
-    const animarContadores = () => {
-        for (const contador of contadores){
-            const actualizar_contador = () => {
-                let cantidad_maxima = +contador.dataset.cantidadTotal ,
-                valor_actual = +contador.innerText , 
-                incremento = cantidad_maxima / velocidad
+    const animateCounter = () => {
+        for (const counter of counters){
+            const updateCounter = () => {
+                let maxQuantity = +counter.dataset.totalQuantity ,
+                currentValue = +counter.innerText , 
+                increment = maxQuantity / speed
 
-                if (valor_actual < cantidad_maxima) {
-                    contador.innerText = Math.ceil(valor_actual + incremento);
-                    setTimeout(actualizar_contador, 18)
+                if (currentValue < maxQuantity) {
+                    counter.innerText = Math.ceil(currentValue + increment);
+                    setTimeout(updateCounter, 18)
                 } else {
-                    contador.innerText = cantidad_maxima;
+                    counter.innerText = maxQuantity;
                 }
             }
-            actualizar_contador();
+            updateCounter();
          }
     }
 
-    const mostrarContadores = elementos => {
-      elementos.forEach(elemento => {
-        if(elemento.isIntersecting){
-          elemento.target.classList.add('animar')
-          elemento.target.classList.remove('card-hidden')
-          setTimeout( animarContadores, 600);
+    const mostrarContadores = elements => {
+      elements.forEach(element => {
+        if(element.isIntersecting){
+          element.target.classList.add('animate')
+          element.target.classList.remove('card-hidden')
+          setTimeout( animateCounter, 600);
         }
       })
     }
