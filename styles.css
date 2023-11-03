@@ -962,6 +962,36 @@ body {
   line-height: normal;
 }
 
+/* Animation Contadores */
+
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);
+    -webkit-transform: translateY(10rem);
+    -moz-transform: translateY(10rem);
+    -ms-transform: translateY(10rem);
+    -o-transform: translateY(10rem);
+}
+100% {
+  opacity: 1;
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+}
+}
+
+.card-hidden {
+  opacity: 0;
+}
+
+.animar {
+  animation: aparecer 1.2s ;
+  -webkit-animation: aparecer 1.2s ;
+}
+
 @media screen and (min-width: 768px) {
   .section-how-the-impacts {
     padding: 14.4rem 0.8rem;
