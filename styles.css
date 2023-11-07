@@ -465,6 +465,10 @@ body {
   overflow: hidden;
 }
 
+.opacity-0{
+  opacity: 0;
+}
+
 .container-icon-menu{
   grid-area: icono;
   transition: opacity 0.3s;
@@ -599,6 +603,7 @@ body {
   .container-nav-desk {
     position: sticky;
     top: 0;
+    z-index: 100;
     display: flex;
     background: var(--white);
     width: 100%;
@@ -964,6 +969,36 @@ body {
   font-size: 2rem;
   font-weight: 500;
   line-height: normal;
+}
+
+/* Animation Contadores */
+
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);
+    -webkit-transform: translateY(10rem);
+    -moz-transform: translateY(10rem);
+    -ms-transform: translateY(10rem);
+    -o-transform: translateY(10rem);
+}
+100% {
+  opacity: 1;
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+}
+}
+
+.card-hidden {
+  opacity: 0;
+}
+
+.animate {
+  animation: show 1.2s ;
+  -webkit-animation: show 1.2s ;
 }
 
 @media screen and (min-width: 768px) {
