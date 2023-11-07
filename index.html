@@ -416,7 +416,7 @@
          }
     }
 
-    const mostrarContadores = elements => {
+    const showCounters = elements => {
       elements.forEach(element => {
         if(element.isIntersecting){
           element.target.classList.add('animate')
@@ -425,17 +425,16 @@
         }
       })
     }
-    const observer = new IntersectionObserver(mostrarContadores, {
+    const observer = new IntersectionObserver(showCounters, {
       threshold: 0.75
     }
     )
-    const elementosHtml = document.querySelectorAll('.card-impact')
+    const cardsImpact = document.querySelectorAll('.card-impact')
 
-    elementosHtml.forEach(elementoHtml => {
-      observer.observe(elementoHtml);
+    cardsImpact.forEach(cardImpact => {
+      observer.observe(cardImpact);
     })
   });
 </script>
 </body>
-
 </html>

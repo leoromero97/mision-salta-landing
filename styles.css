@@ -603,6 +603,7 @@ body {
   .container-nav-desk {
     position: sticky;
     top: 0;
+    z-index: 100;
     display: flex;
     background: var(--white);
     width: 100%;
