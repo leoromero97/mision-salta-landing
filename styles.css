@@ -415,6 +415,7 @@ body {
 .header {
   display: grid;
   width: 36rem;
+  z-index: 100;
   min-width: 100%;
   padding: 2.8rem 1.2rem;
   grid-template-columns: max-content max-content;
@@ -727,7 +728,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .hero-container {
-    background-image: url("/assets/images/image-hero-desktop.jpg");
+    background-image: url("/assets/images/image-hero-desktop.png");
     height: 84rem;
     justify-content: center;
   }
@@ -790,22 +791,84 @@ body {
   align-self: stretch;
 }
 
-.container-video {
-  display: flex;
-  height: 40rem;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  align-self: stretch;
+.figure-img{
+  display: grid;
+  grid-template-areas: "card";
   overflow: hidden;
+  cursor: pointer;
+}
+
+.figure-img:hover .show-text-img{
+transform: translateY(0);
+}
+
+.show-text-img{
+  grid-area: card;
+  color: var(--blue-tones-100);
+  font-size: 4.2rem;
+  display: grid;
+  place-items: center;
+  background-color: #0000006a;
+  transform: translateY(100%);
+  transition:transform .8s ease-in-out;
+  -webkit-transition:transform .8s ease-in-out;
+  -moz-transition:transform .8s ease-in-out;
+  -ms-transition:transform .8s ease-in-out;
+  -o-transition:transform .8s ease-in-out;
   border-radius: 0.8rem;
 }
 
-.img-video {
+
+.container-video {
+  grid-area: card;
+  display: flex;
+  height: 40rem;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  opacity: 0;
+  align-self: stretch;
+  overflow: hidden;
+  transition: .8s ease-in-out all;
+  -webkit-transition: .8s ease-in-out all;
+  -moz-transition: .8s ease-in-out all;
+  -ms-transition: .8s ease-in-out all;
+  -o-transition: .8s ease-in-out all;
+  border-radius: 0.8rem;
+}
+
+.container-video img {
   width: 100%;
   height: 60rem;
   object-fit: cover;
+  filter: brightness(.8);
+  -webkit-filter: brightness(.8);
+}
+
+/*Animation Img */
+
+.reset {
+  animation: animation-img-right 1s forwards;
+  -webkit-animation: animation-img-right 1s forwards;
+}
+
+@keyframes animation-img-right {
+  0%{
+    transform: translateX(10rem);
+    -webkit-transform: translateX(10rem);
+    -moz-transform: translateX(10rem);
+    -ms-transform: translateX(10rem);
+    -o-transform: translateX(10rem);
+    opacity: 0;
+}
+100%{
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  opacity: 1;
+}
 }
 
 @media (min-width: 768px) {

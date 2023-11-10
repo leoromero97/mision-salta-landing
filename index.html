@@ -114,11 +114,16 @@
             Donar por cafecito
           </a>
         </div>
-        <a href="https://youtu.be/QdS1T98Kf0Q?si=wG6Dtx-hvjITZPty" target="_blank" rel="noopener noreferrer"
-          class="container-video" title="Ver el video en Youtube">
-          <img src="/assets/images/cover-video-2022.jpg" alt="Portada del video en Youtube de Misión Salta del 2022"
-            class="img-video" />
-        </a>
+        <figure class="figure-img">
+          <a href="https://youtu.be/QdS1T98Kf0Q?si=wG6Dtx-hvjITZPty" target="_blank" rel="noopener noreferrer"
+            class="container-video" id="imagen1" title="Ver el video del 2022 en Youtube">
+            <img src="assets/images/cover-video-2022.jpg"
+              alt="Portada del video en Youtube de Misión Salta del 2022" />
+          </a>
+          <figcaption class="show-text-img">
+            Misión Salta 2022
+          </figcaption>
+        </figure>
       </div>
     </section>
 
@@ -162,12 +167,15 @@
             Solicitar ser voluntario
           </a>
         </div>
-        <div class="those-who-participate-container-video">
+        <figure class="figure-img">
           <a href="https://youtu.be/GSyizvd2bbE?si=LEuXSwA0Le37JiHQ" target="_blank" rel="noopener noreferrer"
-            class="video" title="Ver el video del 2021 en Youtube">
-            <img src="/assets/images/cover-video-2021.png" alt="Portada del video en Youtube de Misión Salta del 2021">
+            class="container-video" id="imagen2" title="Ver el video del 2021 en Youtube">
+            <img src="/assets/images/cover-video-2021.jpg" alt="Portada del video en Youtube de Misión Salta del 2021">
           </a>
-        </div>
+          <figcaption class="show-text-img">
+            Misión Salta 2021
+          </figcaption>
+        </figure>
       </div>
     </section>
 
@@ -289,12 +297,15 @@
             Solicitar ser voluntario
           </a>
         </div>
-        <div class="how-to-help-container-video">
-          <a href="https://www.youtube.com/watch?v=ge50xNe8Yz8" target="_blank" rel="noopener noreferrer" class="video"
-            title="Ver el video del 2019 en Youtube">
-            <img src="/assets/images/cover-video-2019.png" alt="Portada del video en Youtube de Misión Salta del 2019">
+        <figure class="figure-img">
+          <a href="https://www.youtube.com/watch?v=ge50xNe8Yz8" target="_blank" rel="noopener noreferrer"
+            class="container-video" title="Ver el video del 2019 en Youtube" id="imagen3">
+            <img src="/assets/images/cover-video-2019.jpg" alt="Portada del video en Youtube de Misión Salta del 2019">
           </a>
-        </div>
+          <figcaption class="show-text-img">
+            Misión Salta 2019
+          </figcaption>
+        </figure>
       </div>
     </section>
   </main>
@@ -435,6 +446,29 @@
       observer.observe(cardImpact);
     })
   });
+
+const imgOne = document.getElementById('imagen1');
+const imgTwo = document.getElementById('imagen2');
+const imgThree = document.getElementById('imagen3');
+
+const loadImg = entrys => {
+
+	entrys.forEach((entry) => {
+		if(entry.isIntersecting){
+			entry.target.classList.add('reset');
+		} 
+	});
+}
+
+const observerTwo = new IntersectionObserver(loadImg, {
+	root: null,
+  rootMargin: '500px 0px 250px 0px',
+	threshold: 1.0
+});
+
+observerTwo.observe(imgOne);
+observerTwo.observe(imgTwo);
+observerTwo.observe(imgThree);
 </script>
 </body>
 </html>
