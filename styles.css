@@ -283,22 +283,6 @@ body {
   width: 100%;
 }
 
-.video {
-  height: 40rem;
-  width: 100%;
-  border-radius: 0.8rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  max-width: 60rem;
-}
-
-
-.video:hover {
-  border: 0.4rem solid var(--brand-primary-blue, #25337a);
-}
-
 .button-float-wpp {
   display: flex;
   align-items: center;
@@ -380,14 +364,6 @@ body {
 
   .card-activity-label {
     font-size: 1.8rem;
-  }
-
-  .video {
-    height: 60rem;
-  }
-
-  .video:hover {
-    border: 0.4rem solid var(--brand-primary-blue, #25337A);
   }
 
   .button-primary:hover {
@@ -728,7 +704,7 @@ body {
 
 @media screen and (min-width: 768px) {
   .hero-container {
-    background-image: url("/assets/images/image-hero-desktop.png");
+    background-image: url("/assets/images/image-hero-desktop.jpg");
     height: 84rem;
     justify-content: center;
   }
@@ -816,6 +792,7 @@ transform: translateY(0);
   -ms-transition:transform .8s ease-in-out;
   -o-transition:transform .8s ease-in-out;
   border-radius: 0.8rem;
+  pointer-events: none;
 }
 
 
@@ -837,12 +814,12 @@ transform: translateY(0);
   border-radius: 0.8rem;
 }
 
-.container-video img {
+.img-video-ms {
   width: 100%;
   height: 60rem;
   object-fit: cover;
-  filter: brightness(.8);
-  -webkit-filter: brightness(.8);
+  filter: brightness(.9);
+  -webkit-filter: brightness(.9);
 }
 
 /*Animation Img */
@@ -897,11 +874,6 @@ transform: translateY(0);
     width: 61rem;
     height: 60rem;
   }
-
-  .img-video {
-    width: 100%;
-    height: 60rem;
-  }
 }
 
 /* Those who participate section */
@@ -936,27 +908,12 @@ transform: translateY(0);
   color: var(--white, #ffffff);
 }
 
-.those-who-participate-container-video {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
 @media screen and (min-width: 768px) {
   .those-who-participate-container {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     padding: 14.4rem 0.8rem;
-  }
-
-  .those-who-participate-container-content,
-  .those-who-participate-container-video {
-    width: 50%;
-  }
-
-  .those-who-participate-container-video {
-    justify-content: flex-start;
   }
 
   .those-who-participate-container-content {
@@ -1145,12 +1102,6 @@ transform: translateY(0);
   color: var(--blue-tones-200, #c9cfef);
 }
 
-.how-to-help-container-video {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
 @media screen and (min-width: 768px) {
   .how-to-help-container {
     flex-direction: row;
@@ -1158,16 +1109,6 @@ transform: translateY(0);
     justify-content: space-between;
     padding: 14.4rem 0.8rem;
   }
-
-  .how-to-help-container-content,
-  .how-to-help-container-video {
-    width: 50%;
-  }
-
-  .how-to-help-container-video {
-    justify-content: flex-end;
-  }
-
 
   .how-to-help-container-content {
     max-width: 61rem;
