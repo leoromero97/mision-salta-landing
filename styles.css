@@ -815,7 +815,7 @@ transform: translateY(0);
 }
 
 .img-video-ms {
-  width: 100%;
+  width: 61rem;
   height: 60rem;
   object-fit: cover;
   filter: brightness(.9);
@@ -871,7 +871,6 @@ transform: translateY(0);
   }
 
   .container-video {
-    width: 61rem;
     height: 60rem;
   }
 }
